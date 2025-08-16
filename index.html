@@ -1,0 +1,426 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>restaurant</title>
+
+  <!-- CSS libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+<header class="container-fluid p-0">
+  <div class="header-bg d-flex flex-column justify-content-center align-items-center text-center text-white">
+    <h1 class="display-3 fw-bold mb-3" data-aos="fade-down">Le Gourmet d’Or</h1>
+    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Une expérience culinaire d'exception</p>
+    <a href="#menu" class="btn btn-warning btn-lg px-4 py-2" data-aos="zoom-in" data-aos-delay="400">
+      Découvrir le menu
+    </a>
+  </div>
+</header>
+
+
+<!-- SECTION À PROPOS -->
+<section id="about" class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Image -->
+      <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+        <img src="./img/lucas-law-KDVGz-qnHfc-unsplash.webp" alt="Chef du restaurant" class="img-fluid rounded shadow">
+      </div>
+      
+      <!-- Texte -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <h2 class="fw-bold mb-4 text-dark">À propos de <span style="color:#d4af37;">Le Gourmet d’Or</span></h2>
+        <p class="mb-4">
+          Depuis plus de 20 ans, notre chef étoilé vous invite à un voyage culinaire unique.  
+          Des ingrédients d’exception, une créativité sans limite et un service irréprochable  
+          font de chaque repas un moment inoubliable.
+        </p>
+        
+        <!-- Valeurs -->
+        <div class="row text-center">
+          <div class="col-4">
+            <i class="bi bi-star-fill fs-1" style="color:#d4af37;"></i>
+            <p class="mt-2">Excellence</p>
+          </div>
+          <div class="col-4">
+            <i class="bi bi-flower1 fs-1" style="color:#d4af37;"></i>
+            <p class="mt-2">Fraîcheur</p>
+          </div>
+          <div class="col-4">
+            <i class="bi bi-heart-fill fs-1" style="color:#d4af37;"></i>
+            <p class="mt-2">Passion</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTION MENU -->
+<section id="menu" class="py-5">
+  <div class="container text-center">
+    
+    <!-- Titre -->
+    <h2 class="fw-bold mb-4" data-aos="fade-up">
+      Notre <span style="color:#d4af37;">Carte</span>
+    </h2>
+    <p class="mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">
+      Découvrez une sélection de nos plats signatures préparés avec passion.
+    </p>
+
+    <!-- Grille des plats -->
+    <div class="row g-4">
+      
+      <!-- Plat -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/george-zheng-0Kbjfwunink-unsplash.webp" class="card-img-top" alt="Filet de Bœuf Rossini">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Filet de Bœuf Rossini</h5>
+            <p class="card-text text-muted">Foie gras poêlé, sauce truffe.</p>
+            <p class="fw-bold" style="color:#d4af37;">39€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/nima-naseri-5G0c8BP9lbI-unsplash.webp" class="card-img-top" alt="Saint-Jacques Beurre Noisette">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Saint-Jacques Beurre Noisette</h5>
+            <p class="card-text text-muted">Purée de céleri, émulsion citron.</p>
+            <p class="fw-bold" style="color:#d4af37;">32€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/martin-widenka-tkfRSPt-jdk-unsplash.webp" class="card-img-top" alt="Soufflé Chocolat">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Soufflé Chocolat Grand Cru</h5>
+            <p class="card-text text-muted">Glace vanille bourbon.</p>
+            <p class="fw-bold" style="color:#d4af37;">14€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/david-foodphototasty-8Iidnni0ljY-unsplash.webp" class="card-img-top" alt="Bar rôti">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Bar Rôti & Fenouil</h5>
+            <p class="card-text text-muted">Beurre citronné, herbes fines.</p>
+            <p class="fw-bold" style="color:#d4af37;">28€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/baiq-daling-ykThMylLsbY-unsplash.webp" class="card-img-top" alt="Ravioles Truffe">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Ravioles à la Truffe</h5>
+            <p class="card-text text-muted">Crème légère au parmesan.</p>
+            <p class="fw-bold" style="color:#d4af37;">24€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/max-griss-EgrdbjewvxI-unsplash.webp" class="card-img-top" alt="Tartelette Citron">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Tartelette Citron Meringuée</h5>
+            <p class="card-text text-muted">Zeste confit, meringue italienne.</p>
+            <p class="fw-bold" style="color:#d4af37;">11€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/patrick-browne-jMwvJ5aj5eA-unsplash.webp" class="card-img-top" alt="Risotto Safran">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Risotto au Safran</h5>
+            <p class="card-text text-muted">Parmesan affiné, huile d’olive.</p>
+            <p class="fw-bold" style="color:#d4af37;">22€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/jimi-filipovski-0VRwj7rYnQI-unsplash.webp" class="card-img-top" alt="Magret Canard">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Magret de Canard</h5>
+            <p class="card-text text-muted">Sauce fruits rouges, gratin dauphinois.</p>
+            <p class="fw-bold" style="color:#d4af37;">27€</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card border-0 shadow h-100 menu-card">
+          <img src="./img/jezebel-rose-PzpyMFEz4xo-unsplash.webp" class="card-img-top" alt="Millefeuille Vanille">
+          <div class="card-body">
+            <h5 class="card-title fw-bold">Millefeuille à la Vanille</h5>
+            <p class="card-text text-muted">Crème légère, pâte feuilletée croustillante.</p>
+            <p class="fw-bold" style="color:#d4af37;">12€</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+ <!-- Bouton centré -->
+<div class="mt-5 text-center">
+  <a href="cartecomplete.html" class="btn btn-warning px-4 py-2 fw-bold">Voir la carte complète</a>
+</div>
+  </div>
+</section>
+
+<!-- SECTION GALERIE -->
+<section id="galerie" class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Titre -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold" data-aos="fade-up">
+        Notre <span style="color:#d4af37;">Galerie</span>
+      </h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+        Découvrez notre univers en images.
+      </p>
+    </div>
+
+    <!-- Galerie -->
+    <div class="row g-4">
+      <!-- Image 1 -->
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in">
+        <a href="./img/salle.webp" class="glightbox" data-gallery="restaurant">
+          <img src="./img/salle.webp" class="gallery-img" alt="Salle du restaurant">
+        </a>
+      </div>
+
+      <!-- Image 2 -->
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <a href="./img/plat gastro.webp" class="glightbox" data-gallery="restaurant">
+          <img src="./img/plat gastro.webp" class="gallery-img" alt="Plat gastronomique">
+        </a>
+      </div>
+
+      <!-- Image 3 -->
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="./img/chef.webp" class="glightbox" data-gallery="restaurant">
+          <img src="./img/chef.webp" class="gallery-img" alt="Chef en cuisine">
+        </a>
+      </div>
+</section>
+
+
+
+
+<!-- SECTION AVIS CLIENTS -->
+<section id="avis" class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Titre -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold" data-aos="fade-up">
+        Avis <span style="color:#d4af37;">Clients</span>
+      </h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+        Voici ce que nos clients disent de leur expérience.
+      </p>
+    </div>
+
+    <div class="row g-4">
+      
+      <!-- Avis 1 -->
+      <div class="col-md-4" data-aos="zoom-in">
+        <div class="card border-0 shadow h-100 review-card p-4">
+          <div class="d-flex align-items-center mb-3">
+           <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop" class="avatar me-3" alt="Client 1">
+
+            <div>
+              <h6 class="mb-0 fw-bold">Camille D.</h6>
+              <small class="text-muted">Dîner en couple</small>
+            </div>
+          </div>
+          <p class="mb-3">Cuisine raffinée, service impeccable et cadre chaleureux. Nous reviendrons sans hésiter.</p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-half"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avis 2 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <div class="card border-0 shadow h-100 review-card p-4">
+          <div class="d-flex align-items-center mb-3">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" class="avatar me-3" alt="Client 2">
+            <div>
+              <h6 class="mb-0 fw-bold">Thomas L.</h6>
+              <small class="text-muted">Anniversaire</small>
+            </div>
+          </div>
+          <p class="mb-3">Des plats sublimes, une carte des vins impressionnante et un service parfait.</p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i>
+          </div>
+        </div>
+      </div>
+
+      <!-- Avis 3 -->
+      <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <div class="card border-0 shadow h-100 review-card p-4">
+          <div class="d-flex align-items-center mb-3">
+          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop" class="avatar me-3" alt="Client 3">
+            <div>
+              <h6 class="mb-0 fw-bold">Julie R.</h6>
+              <small class="text-muted">Déjeuner</small>
+            </div>
+          </div>
+          <p class="mb-3">Ambiance élégante, dressage parfait et saveurs mémorables. Un vrai coup de cœur.</p>
+          <div class="stars">
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
+            <i class="bi bi-star"></i>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SECTION CONTACT -->
+<section id="contact" class="py-5 bg-light">
+  <div class="container">
+
+    <!-- Titre -->
+    <div class="text-center mb-5">
+      <h2 class="fw-bold section-title" data-aos="fade-up">
+        <span style="color:#d4af37;">Contactez-nous</span>
+      </h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
+        Pour toute réservation, appelez-nous ou passez nous voir.
+      </p>
+    </div>
+
+    <div class="row g-5 align-items-center">
+      
+      <!-- Infos -->
+      <div class="col-lg-6" data-aos="fade-right">
+        <h5 class="fw-bold mb-3">Nos coordonnées</h5>
+        <ul class="list-unstyled fs-5">
+          <li class="mb-3">
+            <i class="bi bi-geo-alt-fill" style="color:#d4af37;"></i>
+            12 Rue du Gourmet, 75001 Paris
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-telephone-fill" style="color:#d4af37;"></i>
+            <a href="tel:+33123456789" class="text-decoration-none text-dark">01 23 45 67 89</a>
+          </li>
+          <li class="mb-3">
+            <i class="bi bi-envelope-fill" style="color:#d4af37;"></i>
+            <a href="mailto:contact@legourmetdor.fr" class="text-decoration-none text-dark">contact@legourmetdor.fr</a>
+          </li>
+        </ul>
+
+        <h6 class="fw-bold mt-4 mb-3">Horaires d’ouverture</h6>
+        <table class="table table-borderless opening-hours">
+          <tbody>
+            <tr>
+              <td><i class="bi bi-calendar-week" style="color:#d4af37;"></i> Lundi - Vendredi</td>
+              <td class="text-end">12h - 14h / 19h - 23h</td>
+            </tr>
+           <tr>
+            <td><i class="bi bi-calendar-week" style="color:#d4af37;"></i> Samedi</td>
+            <td class="text-end">19h – 23h30</td>
+            </tr>
+            <tr>
+              <td><i class="bi bi-calendar-x" style="color:#d4af37;"></i> Dimanche</td>
+              <td class="text-end text-danger">Fermé</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Carte -->
+      <div class="col-lg-6" data-aos="fade-left">
+        <div class="ratio ratio-16x9 shadow rounded">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.990555959224!2d2.292292615674311!3d48.858373979287736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc7f0df0d27%3A0x8e3c8d9f9b7f!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr" 
+            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="text-white py-4" style="background-color: #1a1a1a;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo / Nom -->
+      <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
+        <h5 class="fw-bold" style="color:#d4af37;">Le Gourmet d’Or</h5>
+        <small class="text-muted">© 2025 Tous droits réservés</small>
+      </div>
+
+      <!-- Liens -->
+      <div class="col-md-4 text-center mb-3 mb-md-0">
+        <a href="#about" class="text-white text-decoration-none mx-2">À propos</a>
+        <a href="#menu" class="text-white text-decoration-none mx-2">Menu</a>
+        <a href="#contact" class="text-white text-decoration-none mx-2">Contact</a>
+      </div>
+
+      <!-- Réseaux sociaux -->
+      <div class="col-md-4 text-center text-md-end">
+        <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-5"></i></a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+
+<!-- JS libs -->
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script src="./js/aos.js"></script>
+</body>
+</html>
+

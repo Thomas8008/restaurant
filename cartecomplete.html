@@ -1,0 +1,352 @@
+
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  base-uri 'self';
+  object-src 'none';
+  frame-ancestors 'none';
+  upgrade-insecure-requests;
+  script-src 'self' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com;
+  style-src  'self' 'unsafe-inline' https://cdn.jsdelivr.net https://unpkg.com https://cdnjs.cloudflare.com https://fonts.googleapis.com;
+  img-src    'self' data: https:;
+  font-src   'self' data: https://cdn.jsdelivr.net https://fonts.gstatic.com;
+  connect-src 'self';
+  frame-src  https://www.google.com https://maps.google.com;
+">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+
+  <title>Le Gourmet d’Or — Carte complète</title>
+
+  <!-- CSS libs -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/carte.css">
+</head>
+<body class="bg-light">
+
+<!-- Header compact -->
+<nav class="navbar navbar-light bg-white shadow-sm sticky-top">
+  <div class="container">
+    <a href="index.html" class="navbar-brand fw-bold"><span class="brand-gold">Le Gourmet d’Or</span></a>
+    <a href="index.html#menu" class="btn btn-gold btn-sm">← Retour au site</a>
+  </div>
+</nav>
+
+<main class="py-5">
+  <div class="container">
+    <div class="row g-4">
+      
+      <!-- NAV LATERALE -->
+      <aside class="col-lg-3">
+        <nav id="menuNav" class="side-nav">
+          <h5 class="fw-bold mb-3">La carte</h5>
+          <nav class="nav nav-pills flex-column gap-2">
+            <a class="nav-link w-100" href="#entrees">Entrées</a>
+            <a class="nav-link w-100" href="#plats">Plats</a>
+            <a class="nav-link w-100" href="#desserts">Desserts</a>
+            <a class="nav-link w-100" href="#boissons">Boissons</a>
+          </nav>
+        </nav>
+      </aside>
+
+      <!-- CONTENU -->
+      <section class="col-lg-9">
+        <!-- Scrollspy natif -->
+        <div id="scrollArea" data-bs-spy="scroll" data-bs-target="#menuNav" data-bs-offset="100" tabindex="0">
+
+          <!-- ENTRÉES -->
+        <div id="entrees" class="menu-section mb-5">
+  <h2 class="mb-3">Entrées <span class="brand-gold">•</span></h2>
+
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Tartare de bar, agrumes & aneth <span class="badge badge-signature ms-2">Signature</span></div>
+    <small class="text-muted">Vinaigrette yuzu, croustillant sésame.</small></div>
+    <div class="price">18€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Œuf parfait, crème de cèpes</div>
+    <small class="text-muted">Mouillettes briochées, huile de truffe.</small></div>
+    <div class="price">15€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Saint-Jacques snackées</div>
+    <small class="text-muted">Panais, beurre noisette citronné.</small></div>
+    <div class="price">19€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Ceviche de dorade</div>
+    <small class="text-muted">Lait de tigre, maïs croquant, coriandre.</small></div>
+    <div class="price">16€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Foie gras de canard mi-cuit</div>
+    <small class="text-muted">Chutney figues & brioche toastée.</small></div>
+    <div class="price">21€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Asperges blanches</div>
+    <small class="text-muted">Sauce mousseline, zeste de citron.</small></div>
+    <div class="price">17€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Carpaccio de bœuf</div>
+    <small class="text-muted">Parmesan affiné, roquette, pignons.</small></div>
+    <div class="price">16€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Burrata crémeuse</div>
+    <small class="text-muted">Tomates anciennes, basilic, huile d’olive.</small></div>
+    <div class="price">14€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Velouté de potimarron</div>
+    <small class="text-muted">Noisettes torréfiées, crème fraîche.</small></div>
+    <div class="price">12€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Saumon gravelax</div>
+    <small class="text-muted">Betterave, aneth, pickles.</small></div>
+    <div class="price">17€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Gyozas végétaux</div>
+    <small class="text-muted">Chou, shiitake, sauce ponzu.</small></div>
+    <div class="price">13€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Tartine de crabe</div>
+    <small class="text-muted">Céleri rémoulade, citron vert.</small></div>
+    <div class="price">18€</div>
+  </div>
+</div>
+
+          <!-- PLATS -->
+         <div id="plats" class="menu-section mb-5">
+  <h2 class="mb-3">Plats <span class="brand-gold">•</span></h2>
+
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Filet de bœuf Rossini <span class="badge badge-signature ms-2">Signature</span></div>
+    <small class="text-muted">Foie gras poêlé, jus réduit à la truffe.</small></div>
+    <div class="price">39€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Bar rôti & fenouil</div>
+    <small class="text-muted">Beurre citronné, herbes fines.</small></div>
+    <div class="price">28€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Risotto au safran</div>
+    <small class="text-muted">Parmesan affiné, huile d’olive.</small></div>
+    <div class="price">22€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Magret de canard</div>
+    <small class="text-muted">Sauce fruits rouges, gratin dauphinois.</small></div>
+    <div class="price">27€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Cabillaud vapeur</div>
+    <small class="text-muted">Émulsion citron-gingembre, légumes croquants.</small></div>
+    <div class="price">24€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Poulpe grillé</div>
+    <small class="text-muted">Purée de pommes de terre fumée, chorizo.</small></div>
+    <div class="price">29€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Côte de veau rôtie</div>
+    <small class="text-muted">Jus court, champignons de saison.</small></div>
+    <div class="price">34€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Pâtes fraîches à la truffe</div>
+    <small class="text-muted">Crème légère, copeaux de truffe noire.</small></div>
+    <div class="price">26€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Burger gourmet</div>
+    <small class="text-muted">Bœuf maturé, comté, oignons confits, frites maison.</small></div>
+    <div class="price">23€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Ravioles ricotta & épinards</div>
+    <small class="text-muted">Beurre de sauge, pignons grillés.</small></div>
+    <div class="price">21€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Curry de légumes</div>
+    <small class="text-muted">Coco, citronnelle, riz jasmin.</small></div>
+    <div class="price">19€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Entrecôte grillée (300g)</div>
+    <small class="text-muted">Sauce béarnaise / poivre, frites & salade.</small></div>
+    <div class="price">33€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Dos de saumon laqué</div>
+    <small class="text-muted">Miso doux, sésame, pak choï.</small></div>
+    <div class="price">26€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Parmentier de confit de canard</div>
+    <small class="text-muted">Purée maison, salade d’herbes.</small></div>
+    <div class="price">24€</div>
+  </div>
+</div>
+
+
+          <!-- DESSERTS -->
+          <div id="desserts" class="menu-section mb-5">
+  <h2 class="mb-3">Desserts <span class="brand-gold">•</span></h2>
+
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Soufflé chocolat grand cru</div>
+    <small class="text-muted">Glace vanille bourbon.</small></div>
+    <div class="price">14€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Tartelette citron meringuée</div>
+    <small class="text-muted">Zeste confit, meringue italienne.</small></div>
+    <div class="price">11€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Millefeuille à la vanille</div>
+    <small class="text-muted">Crème légère, feuilletage croustillant.</small></div>
+    <div class="price">12€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Crème brûlée à la fève tonka</div>
+    <small class="text-muted">Cassonade caramélisée minute.</small></div>
+    <div class="price">10€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Tiramisu maison</div>
+    <small class="text-muted">Café intense, mascarpone aérien.</small></div>
+    <div class="price">10€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Île flottante</div>
+    <small class="text-muted">Crème anglaise vanille, pralines.</small></div>
+    <div class="price">9€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Assiette de fromages affinés</div>
+    <small class="text-muted">Sélection du fromager, chutney.</small></div>
+    <div class="price">13€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Pavlova fruits rouges</div>
+    <small class="text-muted">Meringue croquante, chantilly.</small></div>
+    <div class="price">12€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Poire pochée au vin</div>
+    <small class="text-muted">Épices, glace cannelle.</small></div>
+    <div class="price">11€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Moelleux au chocolat</div>
+    <small class="text-muted">Cœur coulant, glace pistache.</small></div>
+    <div class="price">11€</div>
+  </div>
+</div>
+
+
+          <!-- BOISSONS -->
+          <div id="boissons" class="menu-section mb-5">
+  <h2 class="mb-3">Boissons <span class="brand-gold">•</span></h2>
+
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Eaux</div>
+    <small class="text-muted">Plate / Gazeuse (50cl / 1L)</small></div>
+    <div class="price">3€ / 6€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Sodas artisanaux</div>
+    <small class="text-muted">Citron, gingembre, cola.</small></div>
+    <div class="price">4,5€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Jus pressés minute</div>
+    <small class="text-muted">Orange, pomme, carotte.</small></div>
+    <div class="price">5,5€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Thé / Infusion</div>
+    <small class="text-muted">Sélection maison.</small></div>
+    <div class="price">4€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Café</div>
+    <small class="text-muted">Expresso / Allongé / Cappuccino.</small></div>
+    <div class="price">2,5€ / 3€ / 4€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Bière pression (25cl / 50cl)</div>
+    <small class="text-muted">Blonde / Ambrée.</small></div>
+    <div class="price">4€ / 7€</div>
+  </div>
+
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Verre de vin (AOC)</div>
+    <small class="text-muted">Blanc, rouge ou rosé — sélection du sommelier.</small></div>
+    <div class="price">7€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Pichet de vin (50cl)</div>
+    <small class="text-muted">Sélection du moment.</small></div>
+    <div class="price">16€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Bouteille — Blanc</div>
+    <small class="text-muted">Chablis / Sancerre / Chardonnay.</small></div>
+    <div class="price">29€ / 36€ / 42€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Bouteille — Rouge</div>
+    <small class="text-muted">Bourgogne / Bordeaux / Côtes-du-Rhône.</small></div>
+    <div class="price">32€ / 38€ / 35€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Bouteille — Rosé</div>
+    <small class="text-muted">Coteaux d’Aix / Provence.</small></div>
+    <div class="price">26€ / 31€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Champagne brut (75cl)</div>
+    <small class="text-muted">Maison partenaire.</small></div>
+    <div class="price">59€</div>
+  </div>
+  <div class="menu-item d-flex justify-content-between align-items-start">
+    <div><div class="title">Cocktails signature</div>
+    <small class="text-muted">French 75, Negroni, Spritz.</small></div>
+    <div class="price">11€</div>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="text-white py-4" style="background:#1a1a1a;">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+    <div><strong class="brand-gold">Le Gourmet d’Or</strong> — © 2025</div>
+    <div class="mt-3 mt-md-0">
+      <a href="index.html#contact" class="text-white mx-2">Contact</a>
+      <a href="index.html#menu" class="text-white mx-2">Menu</a>
+    </div>
+  </div>
+</footer>
+
+<!-- JS libs -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="carte.js"></script>
+</body>
+</html>
+
