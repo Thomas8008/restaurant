@@ -1,19 +1,36 @@
-
 <!doctype html>
 <html lang="fr">
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width,initial-scale=1"/>
-  <title>restaurant</title>
+  <title>Le Gourmet d’Or</title>
 
-  <!-- CSS libs -->
+  <!-- Connexions anticipées -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+
+  <!-- Preload de l'image hero (remplace par ton fichier réel) -->
+  <link rel="preload" as="image" href="./img/cover.avif" imagesizes="100vw" fetchpriority="high">
+
+  <!-- CSS libs (Google Fonts retiré) -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
   <link rel="stylesheet" href="./css/style.css">
+
+  <style>
+    :root{--ink:#0f0f10;--muted:#6b7280;--bg:#fafafa;--gold:#d4af37}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+    .header-bg{min-height:70vh;background:url('./img/cover.avif') center/cover no-repeat}
+    .gallery-img{width:100%;height:auto;display:block;border-radius:.5rem}
+    .avatar{width:56px;height:56px;object-fit:cover;border-radius:50%}
+    .menu-card img{object-fit:cover}
+    /* Fixe une hauteur pour les images de carte pour éviter le reflow */
+    .menu-card .card-img-top{aspect-ratio: 4 / 3}
+    a.btn-warning{--bs-btn-color:#000;--bs-btn-bg:#ffc107;--bs-btn-border-color:#ffc107}
+  </style>
 </head>
 <body>
 
@@ -27,38 +44,43 @@
   </div>
 </header>
 
-
-<!-- SECTION À PROPOS -->
+<!-- À PROPOS -->
 <section id="about" class="py-5 bg-light">
   <div class="container">
     <div class="row align-items-center">
-      
       <!-- Image -->
       <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-        <img src="./img/lucas-law-KDVGz-qnHfc-unsplash.webp" alt="Chef du restaurant" class="img-fluid rounded shadow">
+        <img
+          src="./img/lucas-law-KDVGz-qnHfc-unsplash-800.webp"
+          srcset="./img/lucas-law-KDVGz-qnHfc-unsplash-400.webp 400w,
+                  ./img/lucas-law-KDVGz-qnHfc-unsplash-800.webp 800w,
+                  ./img/lucas-law-KDVGz-qnHfc-unsplash-1200.webp 1200w,
+                  ./img/lucas-law-KDVGz-qnHfc-unsplash-1600.webp 1600w"
+          sizes="(max-width: 992px) 100vw, 50vw"
+          width="1200" height="800"
+          loading="lazy" decoding="async"
+          alt="Chef du restaurant" class="img-fluid rounded shadow">
       </div>
-      
+
       <!-- Texte -->
       <div class="col-lg-6" data-aos="fade-left">
-        <h2 class="fw-bold mb-4 text-dark">À propos de <span style="color:#d4af37;">Le Gourmet d’Or</span></h2>
+        <h2 class="fw-bold mb-4 text-dark">À propos de <span style="color:var(--gold);">Le Gourmet d’Or</span></h2>
         <p class="mb-4">
-          Depuis plus de 20 ans, notre chef étoilé vous invite à un voyage culinaire unique.  
-          Des ingrédients d’exception, une créativité sans limite et un service irréprochable  
+          Depuis plus de 20 ans, notre chef étoilé vous invite à un voyage culinaire unique.
+          Des ingrédients d’exception, une créativité sans limite et un service irréprochable
           font de chaque repas un moment inoubliable.
         </p>
-        
-        <!-- Valeurs -->
         <div class="row text-center">
           <div class="col-4">
-            <i class="bi bi-star-fill fs-1" style="color:#d4af37;"></i>
+            <i class="bi bi-star-fill fs-1" style="color:var(--gold);"></i>
             <p class="mt-2">Excellence</p>
           </div>
           <div class="col-4">
-            <i class="bi bi-flower1 fs-1" style="color:#d4af37;"></i>
+            <i class="bi bi-flower1 fs-1" style="color:var(--gold);"></i>
             <p class="mt-2">Fraîcheur</p>
           </div>
           <div class="col-4">
-            <i class="bi bi-heart-fill fs-1" style="color:#d4af37;"></i>
+            <i class="bi bi-heart-fill fs-1" style="color:var(--gold);"></i>
             <p class="mt-2">Passion</p>
           </div>
         </div>
@@ -68,118 +90,194 @@
   </div>
 </section>
 
-
-<!-- SECTION MENU -->
+<!-- MENU -->
 <section id="menu" class="py-5">
   <div class="container text-center">
-    
-    <!-- Titre -->
     <h2 class="fw-bold mb-4" data-aos="fade-up">
-      Notre <span style="color:#d4af37;">Carte</span>
+      Notre <span style="color:var(--gold);">Carte</span>
     </h2>
     <p class="mb-5 text-muted" data-aos="fade-up" data-aos-delay="100">
       Découvrez une sélection de nos plats signatures préparés avec passion.
     </p>
 
-    <!-- Grille des plats -->
     <div class="row g-4">
-      
-      <!-- Plat -->
+
+      <!-- 1 -->
       <div class="col-md-4" data-aos="zoom-in">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/george-zheng-0Kbjfwunink-unsplash.webp" class="card-img-top" alt="Filet de Bœuf Rossini">
+          <img
+            src="./img/george-zheng-0Kbjfwunink-800.webp"
+            srcset="./img/george-zheng-0Kbjfwunink-400.webp 400w,
+                    ./img/george-zheng-0Kbjfwunink-800.webp 800w,
+                    ./img/george-zheng-0Kbjfwunink-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Filet de Bœuf Rossini">
           <div class="card-body">
             <h5 class="card-title fw-bold">Filet de Bœuf Rossini</h5>
             <p class="card-text text-muted">Foie gras poêlé, sauce truffe.</p>
-            <p class="fw-bold" style="color:#d4af37;">39€</p>
+            <p class="fw-bold" style="color:var(--gold);">39€</p>
           </div>
         </div>
       </div>
 
+      <!-- 2 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/nima-naseri-5G0c8BP9lbI-unsplash.webp" class="card-img-top" alt="Saint-Jacques Beurre Noisette">
+          <img
+            src="./img/nima-naseri-5G0c8BP9lbI-800.webp"
+            srcset="./img/nima-naseri-5G0c8BP9lbI-400.webp 400w,
+                    ./img/nima-naseri-5G0c8BP9lbI-800.webp 800w,
+                    ./img/nima-naseri-5G0c8BP9lbI-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Saint-Jacques Beurre Noisette">
           <div class="card-body">
             <h5 class="card-title fw-bold">Saint-Jacques Beurre Noisette</h5>
             <p class="card-text text-muted">Purée de céleri, émulsion citron.</p>
-            <p class="fw-bold" style="color:#d4af37;">32€</p>
+            <p class="fw-bold" style="color:var(--gold);">32€</p>
           </div>
         </div>
       </div>
 
+      <!-- 3 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/martin-widenka-tkfRSPt-jdk-unsplash.webp" class="card-img-top" alt="Soufflé Chocolat">
+          <img
+            src="./img/martin-widenka-tkfRSPt-jdk-800.webp"
+            srcset="./img/martin-widenka-tkfRSPt-jdk-400.webp 400w,
+                    ./img/martin-widenka-tkfRSPt-jdk-800.webp 800w,
+                    ./img/martin-widenka-tkfRSPt-jdk-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Soufflé Chocolat Grand Cru">
           <div class="card-body">
             <h5 class="card-title fw-bold">Soufflé Chocolat Grand Cru</h5>
             <p class="card-text text-muted">Glace vanille bourbon.</p>
-            <p class="fw-bold" style="color:#d4af37;">14€</p>
+            <p class="fw-bold" style="color:var(--gold);">14€</p>
           </div>
         </div>
       </div>
 
+      <!-- 4 -->
       <div class="col-md-4" data-aos="zoom-in">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/david-foodphototasty-8Iidnni0ljY-unsplash.webp" class="card-img-top" alt="Bar rôti">
+          <img
+            src="./img/david-foodphototasty-8Iidnni0ljY-800.webp"
+            srcset="./img/david-foodphototasty-8Iidnni0ljY-400.webp 400w,
+                    ./img/david-foodphototasty-8Iidnni0ljY-800.webp 800w,
+                    ./img/david-foodphototasty-8Iidnni0ljY-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Bar rôti">
           <div class="card-body">
             <h5 class="card-title fw-bold">Bar Rôti & Fenouil</h5>
             <p class="card-text text-muted">Beurre citronné, herbes fines.</p>
-            <p class="fw-bold" style="color:#d4af37;">28€</p>
+            <p class="fw-bold" style="color:var(--gold);">28€</p>
           </div>
         </div>
       </div>
 
+      <!-- 5 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/baiq-daling-ykThMylLsbY-unsplash.webp" class="card-img-top" alt="Ravioles Truffe">
+          <img
+            src="./img/baiq-daling-ykThMylLsbY-800.webp"
+            srcset="./img/baiq-daling-ykThMylLsbY-400.webp 400w,
+                    ./img/baiq-daling-ykThMylLsbY-800.webp 800w,
+                    ./img/baiq-daling-ykThMylLsbY-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Ravioles à la Truffe">
           <div class="card-body">
             <h5 class="card-title fw-bold">Ravioles à la Truffe</h5>
             <p class="card-text text-muted">Crème légère au parmesan.</p>
-            <p class="fw-bold" style="color:#d4af37;">24€</p>
+            <p class="fw-bold" style="color:var(--gold);">24€</p>
           </div>
         </div>
       </div>
 
+      <!-- 6 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/max-griss-EgrdbjewvxI-unsplash.webp" class="card-img-top" alt="Tartelette Citron">
+          <img
+            src="./img/max-griss-EgrdbjewvxI-800.webp"
+            srcset="./img/max-griss-EgrdbjewvxI-400.webp 400w,
+                    ./img/max-griss-EgrdbjewvxI-800.webp 800w,
+                    ./img/max-griss-EgrdbjewvxI-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Tartelette Citron">
           <div class="card-body">
             <h5 class="card-title fw-bold">Tartelette Citron Meringuée</h5>
             <p class="card-text text-muted">Zeste confit, meringue italienne.</p>
-            <p class="fw-bold" style="color:#d4af37;">11€</p>
+            <p class="fw-bold" style="color:var(--gold);">11€</p>
           </div>
         </div>
       </div>
 
+      <!-- 7 -->
       <div class="col-md-4" data-aos="zoom-in">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/patrick-browne-jMwvJ5aj5eA-unsplash.webp" class="card-img-top" alt="Risotto Safran">
+          <img
+            src="./img/patrick-browne-jMwvJ5aj5eA-800.webp"
+            srcset="./img/patrick-browne-jMwvJ5aj5eA-400.webp 400w,
+                    ./img/patrick-browne-jMwvJ5aj5eA-800.webp 800w,
+                    ./img/patrick-browne-jMwvJ5aj5eA-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Risotto au Safran">
           <div class="card-body">
             <h5 class="card-title fw-bold">Risotto au Safran</h5>
             <p class="card-text text-muted">Parmesan affiné, huile d’olive.</p>
-            <p class="fw-bold" style="color:#d4af37;">22€</p>
+            <p class="fw-bold" style="color:var(--gold);">22€</p>
           </div>
         </div>
       </div>
 
+      <!-- 8 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/jimi-filipovski-0VRwj7rYnQI-unsplash.webp" class="card-img-top" alt="Magret Canard">
+          <img
+            src="./img/jimi-filipovski-0VRwj7rYnQI-800.webp"
+            srcset="./img/jimi-filipovski-0VRwj7rYnQI-400.webp 400w,
+                    ./img/jimi-filipovski-0VRwj7rYnQI-800.webp 800w,
+                    ./img/jimi-filipovski-0VRwj7rYnQI-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Magret de Canard">
           <div class="card-body">
             <h5 class="card-title fw-bold">Magret de Canard</h5>
             <p class="card-text text-muted">Sauce fruits rouges, gratin dauphinois.</p>
-            <p class="fw-bold" style="color:#d4af37;">27€</p>
+            <p class="fw-bold" style="color:var(--gold);">27€</p>
           </div>
         </div>
       </div>
 
+      <!-- 9 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="card border-0 shadow h-100 menu-card">
-          <img src="./img/jezebel-rose-PzpyMFEz4xo-unsplash.webp" class="card-img-top" alt="Millefeuille Vanille">
+          <img
+            src="./img/jezebel-rose-PzpyMFEz4xo-800.webp"
+            srcset="./img/jezebel-rose-PzpyMFEz4xo-400.webp 400w,
+                    ./img/jezebel-rose-PzpyMFEz4xo-800.webp 800w,
+                    ./img/jezebel-rose-PzpyMFEz4xo-1200.webp 1200w"
+            sizes="(max-width: 768px) 100vw, 33vw"
+            width="1200" height="800"
+            loading="lazy" decoding="async"
+            class="card-img-top" alt="Millefeuille à la Vanille">
           <div class="card-body">
             <h5 class="card-title fw-bold">Millefeuille à la Vanille</h5>
             <p class="card-text text-muted">Crème légère, pâte feuilletée croustillante.</p>
-            <p class="fw-bold" style="color:#d4af37;">12€</p>
+            <p class="fw-bold" style="color:var(--gold);">12€</p>
           </div>
         </div>
       </div>
@@ -188,76 +286,73 @@
   </div>
 </section>
 
- <!-- Bouton centré -->
+<!-- Bouton -->
 <div class="mt-5 text-center">
   <a href="cartecomplete.html" class="btn btn-warning px-4 py-2 fw-bold">Voir la carte complète</a>
 </div>
+
+<!-- GALERIE -->
+<section id="galerie" class="py-5 bg-light">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold" data-aos="fade-up">
+        Notre <span style="color:var(--gold);">Galerie</span>
+      </h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Découvrez notre univers en images.</p>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in">
+        <a href="./img/salle.webp" class="glightbox" data-gallery="restaurant">
+          <img src="./img/salle-800.webp"
+               srcset="./img/salle-400.webp 400w, ./img/salle-800.webp 800w, ./img/salle-1200.webp 1200w"
+               sizes="(max-width: 768px) 100vw, 33vw"
+               width="1200" height="800"
+               loading="lazy" decoding="async"
+               class="gallery-img" alt="Salle du restaurant">
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
+        <a href="./img/plat gastro.webp" class="glightbox" data-gallery="restaurant">
+          <img src="./img/plat-gastro-800.webp"
+               srcset="./img/plat-gastro-400.webp 400w, ./img/plat-gastro-800.webp 800w, ./img/plat-gastro-1200.webp 1200w"
+               sizes="(max-width: 768px) 100vw, 33vw"
+               width="1200" height="800"
+               loading="lazy" decoding="async"
+               class="gallery-img" alt="Plat gastronomique">
+        </a>
+      </div>
+
+      <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
+        <a href="./img/chef.webp" class="glightbox" data-gallery="restaurant">
+          <img src="./img/chef-800.webp"
+               srcset="./img/chef-400.webp 400w, ./img/chef-800.webp 800w, ./img/chef-1200.webp 1200w"
+               sizes="(max-width: 768px) 100vw, 33vw"
+               width="1200" height="800"
+               loading="lazy" decoding="async"
+               class="gallery-img" alt="Chef en cuisine">
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
-<!-- SECTION GALERIE -->
-<section id="galerie" class="py-5 bg-light">
-  <div class="container">
-
-    <!-- Titre -->
-    <div class="text-center mb-4">
-      <h2 class="fw-bold" data-aos="fade-up">
-        Notre <span style="color:#d4af37;">Galerie</span>
-      </h2>
-      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
-        Découvrez notre univers en images.
-      </p>
-    </div>
-
-    <!-- Galerie -->
-    <div class="row g-4">
-      <!-- Image 1 -->
-      <div class="col-sm-6 col-md-4" data-aos="zoom-in">
-        <a href="./img/salle.webp" class="glightbox" data-gallery="restaurant">
-          <img src="./img/salle.webp" class="gallery-img" alt="Salle du restaurant">
-        </a>
-      </div>
-
-      <!-- Image 2 -->
-      <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="100">
-        <a href="./img/plat gastro.webp" class="glightbox" data-gallery="restaurant">
-          <img src="./img/plat gastro.webp" class="gallery-img" alt="Plat gastronomique">
-        </a>
-      </div>
-
-      <!-- Image 3 -->
-      <div class="col-sm-6 col-md-4" data-aos="zoom-in" data-aos-delay="200">
-        <a href="./img/chef.webp" class="glightbox" data-gallery="restaurant">
-          <img src="./img/chef.webp" class="gallery-img" alt="Chef en cuisine">
-        </a>
-      </div>
-</section>
-
-
-
-
-<!-- SECTION AVIS CLIENTS -->
+<!-- AVIS CLIENTS -->
 <section id="avis" class="py-5 bg-light">
   <div class="container">
-
-    <!-- Titre -->
     <div class="text-center mb-5">
-      <h2 class="fw-bold" data-aos="fade-up">
-        Avis <span style="color:#d4af37;">Clients</span>
-      </h2>
-      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
-        Voici ce que nos clients disent de leur expérience.
-      </p>
+      <h2 class="fw-bold" data-aos="fade-up">Avis <span style="color:var(--gold);">Clients</span></h2>
+      <p class="text-muted" data-aos="fade-up" data-aos-delay="100">Voici ce que nos clients disent de leur expérience.</p>
     </div>
 
     <div class="row g-4">
-      
-      <!-- Avis 1 -->
       <div class="col-md-4" data-aos="zoom-in">
         <div class="card border-0 shadow h-100 review-card p-4">
           <div class="d-flex align-items-center mb-3">
-           <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop" class="avatar me-3" alt="Client 1">
-
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=224&h=224&fit=crop"
+                 width="56" height="56" loading="lazy" decoding="async"
+                 class="avatar me-3" alt="Client 1">
             <div>
               <h6 class="mb-0 fw-bold">Camille D.</h6>
               <small class="text-muted">Dîner en couple</small>
@@ -272,11 +367,12 @@
         </div>
       </div>
 
-      <!-- Avis 2 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="100">
         <div class="card border-0 shadow h-100 review-card p-4">
           <div class="d-flex align-items-center mb-3">
-            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=400&h=400&fit=crop" class="avatar me-3" alt="Client 2">
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=224&h=224&fit=crop"
+                 width="56" height="56" loading="lazy" decoding="async"
+                 class="avatar me-3" alt="Client 2">
             <div>
               <h6 class="mb-0 fw-bold">Thomas L.</h6>
               <small class="text-muted">Anniversaire</small>
@@ -291,11 +387,12 @@
         </div>
       </div>
 
-      <!-- Avis 3 -->
       <div class="col-md-4" data-aos="zoom-in" data-aos-delay="200">
         <div class="card border-0 shadow h-100 review-card p-4">
           <div class="d-flex align-items-center mb-3">
-          <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=400&h=400&fit=crop" class="avatar me-3" alt="Client 3">
+            <img src="https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?w=224&h=224&fit=crop"
+                 width="56" height="56" loading="lazy" decoding="async"
+                 class="avatar me-3" alt="Client 3">
             <div>
               <h6 class="mb-0 fw-bold">Julie R.</h6>
               <small class="text-muted">Déjeuner</small>
@@ -309,21 +406,17 @@
           </div>
         </div>
       </div>
-
     </div>
 
   </div>
 </section>
 
-
-<!-- SECTION CONTACT -->
+<!-- CONTACT -->
 <section id="contact" class="py-5 bg-light">
   <div class="container">
-
-    <!-- Titre -->
     <div class="text-center mb-5">
       <h2 class="fw-bold section-title" data-aos="fade-up">
-        <span style="color:#d4af37;">Contactez-nous</span>
+        <span style="color:var(--gold);">Contactez-nous</span>
       </h2>
       <p class="text-muted" data-aos="fade-up" data-aos-delay="100">
         Pour toute réservation, appelez-nous ou passez nous voir.
@@ -331,96 +424,65 @@
     </div>
 
     <div class="row g-5 align-items-center">
-      
-      <!-- Infos -->
       <div class="col-lg-6" data-aos="fade-right">
         <h5 class="fw-bold mb-3">Nos coordonnées</h5>
         <ul class="list-unstyled fs-5">
-          <li class="mb-3">
-            <i class="bi bi-geo-alt-fill" style="color:#d4af37;"></i>
-            12 Rue du Gourmet, 75001 Paris
-          </li>
-          <li class="mb-3">
-            <i class="bi bi-telephone-fill" style="color:#d4af37;"></i>
-            <a href="tel:+33123456789" class="text-decoration-none text-dark">01 23 45 67 89</a>
-          </li>
-          <li class="mb-3">
-            <i class="bi bi-envelope-fill" style="color:#d4af37;"></i>
-            <a href="mailto:contact@legourmetdor.fr" class="text-decoration-none text-dark">contact@legourmetdor.fr</a>
-          </li>
+          <li class="mb-3"><i class="bi bi-geo-alt-fill" style="color:var(--gold);"></i> 12 Rue du Gourmet, 75001 Paris</li>
+          <li class="mb-3"><i class="bi bi-telephone-fill" style="color:var(--gold);"></i>
+            <a href="tel:+33123456789" class="text-decoration-none text-dark">01 23 45 67 89</a></li>
+          <li class="mb-3"><i class="bi bi-envelope-fill" style="color:var(--gold);"></i>
+            <a href="mailto:contact@legourmetdor.fr" class="text-decoration-none text-dark">contact@legourmetdor.fr</a></li>
         </ul>
 
         <h6 class="fw-bold mt-4 mb-3">Horaires d’ouverture</h6>
         <table class="table table-borderless opening-hours">
           <tbody>
-            <tr>
-              <td><i class="bi bi-calendar-week" style="color:#d4af37;"></i> Lundi - Vendredi</td>
-              <td class="text-end">12h - 14h / 19h - 23h</td>
-            </tr>
-           <tr>
-            <td><i class="bi bi-calendar-week" style="color:#d4af37;"></i> Samedi</td>
-            <td class="text-end">19h – 23h30</td>
-            </tr>
-            <tr>
-              <td><i class="bi bi-calendar-x" style="color:#d4af37;"></i> Dimanche</td>
-              <td class="text-end text-danger">Fermé</td>
-            </tr>
+            <tr><td><i class="bi bi-calendar-week" style="color:var(--gold);"></i> Lundi - Vendredi</td><td class="text-end">12h - 14h / 19h - 23h</td></tr>
+            <tr><td><i class="bi bi-calendar-week" style="color:var(--gold);"></i> Samedi</td><td class="text-end">19h – 23h30</td></tr>
+            <tr><td><i class="bi bi-calendar-x" style="color:var(--gold);"></i> Dimanche</td><td class="text-end text-danger">Fermé</td></tr>
           </tbody>
         </table>
       </div>
 
-      <!-- Carte -->
       <div class="col-lg-6" data-aos="fade-left">
         <div class="ratio ratio-16x9 shadow rounded">
-          <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.990555959224!2d2.292292615674311!3d48.858373979287736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc7f0df0d27%3A0x8e3c8d9f9b7f!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr" 
-            width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy">
-          </iframe>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.990555959224!2d2.292292615674311!3d48.858373979287736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66fc7f0df0d27%3A0x8e3c8d9f9b7f!2sTour%20Eiffel!5e0!3m2!1sfr!2sfr!4v1680000000000!5m2!1sfr!2sfr"
+            width="800" height="450" style="border:0" allowfullscreen
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </div>
-
     </div>
-
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="text-white py-4" style="background-color: #1a1a1a;">
+<footer class="text-white py-4" style="background-color:#1a1a1a;">
   <div class="container">
     <div class="row align-items-center">
-      
-      <!-- Logo / Nom -->
       <div class="col-md-4 text-center text-md-start mb-3 mb-md-0">
-        <h5 class="fw-bold" style="color:#d4af37;">Le Gourmet d’Or</h5>
+        <h5 class="fw-bold" style="color:var(--gold);">Le Gourmet d’Or</h5>
         <small class="text-muted">© 2025 Tous droits réservés</small>
       </div>
-
-      <!-- Liens -->
       <div class="col-md-4 text-center mb-3 mb-md-0">
         <a href="#about" class="text-white text-decoration-none mx-2">À propos</a>
         <a href="#menu" class="text-white text-decoration-none mx-2">Menu</a>
         <a href="#contact" class="text-white text-decoration-none mx-2">Contact</a>
       </div>
-
-      <!-- Réseaux sociaux -->
       <div class="col-md-4 text-center text-md-end">
         <a href="#" class="text-white mx-2"><i class="bi bi-facebook fs-5"></i></a>
         <a href="#" class="text-white mx-2"><i class="bi bi-instagram fs-5"></i></a>
         <a href="#" class="text-white mx-2"><i class="bi bi-twitter-x fs-5"></i></a>
       </div>
-
     </div>
   </div>
 </footer>
 
-
-
-<!-- JS libs -->
- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<!-- JS libs: DEFER = non bloquant -->
+<script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 <script src="./js/aos.js"></script>
 </body>
 </html>
-
